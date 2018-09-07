@@ -1,41 +1,5 @@
 # Openwhisk introduction by examples (on minishift)
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-- [Openwhisk introduction by examples (on minishift)](#openwhisk-introduction-by-examples-on-minishift)
-	- [What is Apache OpenWhisk?](#what-is-apache-openwhisk)
-	- [What is minishift?](#what-is-minishift)
-	- [Setup openwhisk on minishift](#setup-openwhisk-on-minishift)
-		- [Configure your environment](#configure-your-environment)
-			- [minishift4openwhisk command](#minishift4openwhisk-command)
-- [!/bin/bash](#binbash)
-- [Don't foget to add the location of minishift executable to PATH](#dont-foget-to-add-the-location-of-minishift-executable-to-path)
-			- [Setup your environment for OpenShift](#setup-your-environment-for-openshift)
-			- [Install OpenWhisk on your local openshift cluster](#install-openwhisk-on-your-local-openshift-cluster)
-		- [Install and configure openwhisk CLI](#install-and-configure-openwhisk-cli)
-- [!/bin/bash](#binbash)
-		- [Test installation](#test-installation)
-	- [Openwhisk key concepts by examples](#openwhisk-key-concepts-by-examples)
-		- [Openwhisk Actions](#openwhisk-actions)
-			- [Say Hello using Python](#say-hello-using-python)
-				- [Create the action](#create-the-action)
-				- [Invoke the action](#invoke-the-action)
-			- [Reverse string using javascript](#reverse-string-using-javascript)
-			- [Using external library (js)](#using-external-library-js)
-				- [web actions](#web-actions)
-				- [Other language Actions](#other-language-actions)
-		- [Openwhisk Action sequences](#openwhisk-action-sequences)
-			- [Put our 3 actions together](#put-our-3-actions-together)
-			- [Action order in sequence matters](#action-order-in-sequence-matters)
-			- [Input and output names of actions matters](#input-and-output-names-of-actions-matters)
-			- [Looking activations log for sequences](#looking-activations-log-for-sequences)
-		- [Triggers and rules](#triggers-and-rules)
-		- [Feeds](#feeds)
-		- [Package](#package)
-	- [Advanced examples](#advanced-examples)
-
-<!-- /TOC -->
-
 ## What is Apache OpenWhisk?
 > Apache OpenWhisk (Incubating) is an open source, distributed Serverless platform that executes functions (fx) in response to events at any scale. OpenWhisk manages the infrastructure, servers and scaling using Docker containers so you can focus on building amazing and efficient applications.
 >
