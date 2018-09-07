@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#Don't foget to add the location of minishift executable to PATH
+
+minishift profile set openwhisk-examples
+minishift config set memory 8GB
+minishift config set cpus 4
+minishift config set image-caching true
+minishift addon enable admin-user
+minishift addon enable anyuid
+
+minishift start
+
+minishift ssh -- sudo ip link set docker0 promisc on

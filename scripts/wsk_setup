@@ -1,0 +1,6 @@
+#!/bin/bash
+eval $(minishift oc-env) && eval $(minishift docker-env)
+oc login $(minishift ip):8443 -u admin -p admin
+oc project openwhisk-examples #be sure to be in the right project
+AUTH_SECRET=$(oc get secret whisk.auth -o yaml | grep "system:" | awk '{print $2}' | base64 --decode)
+wsk property set --auth $AUTH_SECRET --apihost $(oc get route/openwhisk --template="{{.spec.host}}")
