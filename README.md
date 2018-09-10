@@ -165,7 +165,8 @@ We will refer to this cloned directory as $PRJ_HOME in our next examples
 
 Our first action (using Python) could be found in
 ```bash
-PRJ_HOME/python/Hello.py```
+PRJ_HOME/python/Hello.py
+```
 
 ```Python
 def main(args):
@@ -194,7 +195,7 @@ Now the ```wsk action list``` would contain your own action
 [...]
 ```
 ##### Invoke the action
-Invoking an action with ```wsk`` CLI is pretty simple. (see Web action chapter for REST invocation). CLI build a JSON request and send it to openwhisk. FOr each invocation a container is started and execution of your function run inside this container. Any state is local to the container and it's the reason because actions should be idemponent. There is no guarantee actions execution is ordered or atomically (2 actions could run concurrently). For a more complete discussion on what happen under the wood on action call see [here](https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#action-execution)
+Invoking an action with ```wsk``` CLI is pretty simple. (see Web action chapter for REST invocation). CLI build a JSON request and send it to openwhisk. FOr each invocation a container is started and execution of your function run inside this container. Any state is local to the container and it's the reason because actions should be idemponent. There is no guarantee actions execution is ordered or atomically (2 actions could run concurrently). For a more complete discussion on what happen under the wood on action call see [here](https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#action-execution)
 An action could be invoked in a synch (blocking) way, waiting for results or in asynch (non-blocking) fire-and-forget way.
 Invoking an action create an activation and return an activation-id in case of non-blocking invocation, or result JSON in case of blocking invocation.
 Let's invoke (blocking) our ```helloPy``` action
@@ -408,7 +409,7 @@ wsk action create helloWeb --web true hello-web.py
 wsk action get helloPy --url
 ```
 Opening the url in browser you get this (note I've added also input parameter here ```?name=NotAStranger```)
-![](img/screenshot.png)
+<kbd>![](img/screenshot.png)</kdb>
 
 ##### Other language Actions
 You can write actions in many other languages. Please refer to [official documentation](https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#languages-and-runtimes) for more information. Maybe I'll expand this tutorial w/ examples in other language in next future. For the moment I think above examples are sufficient to introduce actions concepts and usefull to introduce other openwhisk concepts in next chapters
